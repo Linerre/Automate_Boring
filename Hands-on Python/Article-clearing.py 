@@ -1,0 +1,30 @@
+# 3.1.8.1. Article Start Exercise
+# Clearing Articles at the beginning of Titles 
+
+def startWithArticle(title):
+	'''Return True if the first word of title is "The", "A" or "An".'''
+	if title.startswith('The') or title.startswith('An') or title.startswith('A'):
+		return True
+	else:
+		return False
+
+
+# Adapt the function above to make one that can delete articles
+
+def deletA(title):
+	if title.startswith('The'):
+		new_title = title.replace('The ', '', 1)
+		print ('The title to be used will be:', new_title)
+	elif title.startswith('An'):
+		new_title = title.replace('An ', '', 1)
+		print ('The title to be used will be:', new_title)
+	elif title.startswith('A'):
+		new_title = title.replace('A ', '', 1)
+		print ('The title to be used will be:', new_title)
+	else:
+		print(title)
+
+# Prompt user for a title
+title = input('Please enter a title:')
+deletA(title)
+
