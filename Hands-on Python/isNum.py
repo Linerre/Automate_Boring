@@ -2,7 +2,7 @@
 # isNumberString.py
 
 def isNum(): # clearly this function can't deal with float numbers
-	testString = input('Please enter a number: ')
+	testString = input('Please enter a number: ') # what if I enter -3.5? False!
 	if testString.startswith('-'):
 		newString = testString[1:]
 		print(newString.isdigit())
