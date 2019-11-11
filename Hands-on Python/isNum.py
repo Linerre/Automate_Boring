@@ -8,8 +8,8 @@ def isNum():
 	'''
 	testString = input('Please enter a number: ') 
 	if testString.startswith('-') or testString.find('.') != -1:
-		newString = testString[1:] #this should come after the replace method
-		newString = newString.replace('.', '') # otherwise 6. will become at this step .
+		newString = testString.replace('.', '') # otherwise 6. will become at this step .
+		newString = newString[1:] # this is wrong with any one-digit number!
 		print(newString.isdigit())
 	else:
 		print(testString.isdigit())
