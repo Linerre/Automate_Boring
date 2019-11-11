@@ -1,15 +1,20 @@
 # 3.1.8.2. Is Number String Exercise
 # isNumberString.py
 
-def isNum(): # clearly this function can't deal with float numbers
-	testString = input('Please enter a number: ') # what if I enter -3.5? False!
-	if testString.startswith('-'):
-		newString = testString[1:]
+def isNum(): 
+	'''
+	input: any legal python number: -1.5, .5, 1., -4
+	output: True or False depending on the input
+	'''
+	testString = input('Please enter a number: ') 
+	if testString.startswith('-') or testString.find('.') != -1:
+		newString = testString[1:] #this should come after the replace method
+		newString = newString.replace('.', '') # otherwise 6. will become at this step .
 		print(newString.isdigit())
 	else:
 		print(testString.isdigit())
 
-for i in range(3):
+for i in range(4):
 	isNum()
 
 # An alternative approach:
@@ -21,8 +26,8 @@ def ISNum():
 	else:
 		print(userString.isdigit())
 
-for i in range(3):
-	isNum()
+# for i in range(3):
+# 	isNum()
 
 # isDecimalStr.py
 
@@ -43,5 +48,5 @@ def isDecimalStr():
 	else:
 		print('The number is a decimal:', testString.isdigit())
 
-for i in range(3):
-	isDecimalStr()
+# for i in range(3):
+# 	isDecimalStr()
