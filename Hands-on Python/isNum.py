@@ -8,8 +8,7 @@ def isNum():
 	'''
 	testString = input('Please enter a number: ') 
 	if testString.startswith('-') or testString.find('.') != -1:
-		newString = testString.replace('.', '') # otherwise 6. will become at this step .
-		newString = newString.replace('-', '') # use replace for sure
+		newString = testString.replace('.', '').replace('-', '')
 		print(newString.isdigit())
 	else:
 		print(testString.isdigit())
@@ -17,17 +16,10 @@ def isNum():
 for i in range(4):
 	isNum()
 
-# An alternative approach:
-def ISNum():
-	userString = input('Please enter a number: ')
-	if userString.count('-') == 0:
-		newString = userString.replace('-', '', 1)
-		print(newString.isdigit())
-	else:
-		print(userString.isdigit())
-
-# for i in range(3):
-# 	isNum()
+# the above function works fine and it is short
+# which goes along with Python's phylosophy
+# while the below code is rubbish, written by me around one year ago
+# it acts as very typical bad example of Python code
 
 # isDecimalStr.py
 
