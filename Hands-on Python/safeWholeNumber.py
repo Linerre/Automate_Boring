@@ -7,18 +7,18 @@ def safeWholeNumber():
 	if user_whole.startswith('-'):
 		new_user_whole = user_whole[1:]
 		while new_user_whole.isdigit():
-			print('Great!', user_whole, 'is a whole number!')
+			print('Great!', user_whole, ' is a whole number!')
 			print()
 			user_whole = input('Enter another one or press enter to quit: ')
 
 	elif user_whole.isdigit():
 		while user_whole.isdigit():
-			print('Great!', user_whole, 'is a whole number!')
+			print('Great!', user_whole, ' is a whole number!')
 			print()
 			user_whole = input('Enter another one or press enter to quit: ')
 
 	else:
-		print('Oops', user_whole, 'is not a whole number.')
+		print('Oops', user_whole, ' is not a whole number.') # this merges both illegal num and quit command
 		user_whole = input('Pleanse try again: ')
 		while not user_whole.isdigit():
 			print('Oops', user_whole, 'is not a whole number.')
