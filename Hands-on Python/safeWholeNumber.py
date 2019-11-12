@@ -6,7 +6,7 @@ def safeWholeNumber():
 
 	if user_whole.startswith('-'):
 		new_user_whole = user_whole[1:]
-		while new_user_whole.isdigit():
+		while new_user_whole.isdigit(): # this while loop really looks strange
 			print('Great!', user_whole, ' is a whole number!')
 			print()
 			user_whole = input('Enter another one or press enter to quit: ')
