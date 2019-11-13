@@ -3,7 +3,7 @@
 
 principle = float(input('Please enter your principle: '))
 annual_int = float(input('Please enter the annual interest: '))
-target = float(input('How much you like to have in the end: '))
+target = float(input('How much would you like to have in the end: '))
 
 # suppose that the user always input the right data
 i = 0
@@ -16,13 +16,13 @@ while compound < target:
 	print(final)
 
 # or the last two lines:
-	print(round(compound, 2))
+print(round(compound, 2))
 
 
 # -----------------
 principle = float(input('Please enter your principle: ')) #improve so that enter-erro-proof
 annual_int = float(input('Please enter the annual interest: ')) #improve so that erro-proof
-target = float(input('How much you like to have in the end: ')) #improve so that erro-proof
+target = float(input('How much would you like to have in the end: ')) #improve so that erro-proof
 
 # suppose that the user always input the right data
 i = 0
